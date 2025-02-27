@@ -1,0 +1,415 @@
+html{
+    scroll-behavior: smooth;
+}
+body {
+    color: black;
+    margin: 0;
+    font-weight: bold;
+    padding: 0;
+    background-color: rgb(213, 231, 252);
+    flex-direction: column;
+    font-family: 'Signika', sans-serif;
+}
+.navbar {
+    background-color: rgba(52, 58, 64, 0.9);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 15px;
+    box-sizing: border-box;
+    gap: 20px;
+    
+}
+.navbar > ul {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    list-style: none;
+    border-radius: 3px;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%); 
+}
+.navbar > ul > li {
+    display: inline-block;
+    position: relative;
+
+}
+.navbar > ul > li > a {
+    display: block;
+    text-decoration: none;
+    font-variant: small-caps;
+    font-size: larger;
+    color: white;
+    padding: 0 10px;
+    line-height: 40px;
+    font-size: 15px;
+}
+.navbar > ul > li > a:hover {
+    color: rgb(255, 255, 85);
+
+}
+.navbar ul ul {
+    position: absolute;
+    display: none;
+    margin: 0;
+    list-style: none;
+    border-radius: 3px;
+    width: 200px;
+    height: 60px; /* Đặt chiều cao cố định */
+    background-color: rgba(52, 58, 64, 0.9);
+    box-shadow: 0 0 1px gray;
+
+}
+.navbar ul ul a {
+    display: block;
+    line-height: 30px;
+    color: white;
+    text-decoration: none; /* không gặt chân  */
+    font-variant: small-caps;
+    font-size: larger;
+    padding: 0 10px;
+    
+}
+
+.navbar ul ul a:hover {
+    background-color: orangered;
+    color: rgb(255, 255, 85);
+    opacity: 1; /* Hiện menu dần */
+}
+.navbar > ul > li:hover > ul {
+    display: block;
+    opacity: 1; /* Hiện menu dần */
+
+}
+.img{
+    height: 90%;
+    padding: auto;
+    position: absolute;
+    left: 2%;
+    top: 7%;
+}
+
+.login {
+    margin-left: auto;
+    width: 150px;
+    right: 20px;
+    background-color: #000000;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+
+}
+.login a:hover {
+    
+    color: rgb(255, 255, 85);
+    
+}
+.login a{
+    display: block;
+    margin: 5px;
+    margin-bottom: 15px;
+    color: white;
+    margin-top: 15px;
+    text-decoration: none; /* không gặt chân  */
+    font-variant: small-caps;
+    font-size: larger;
+
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: rgba(52, 58, 64, 0.9);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+.dropdown-menu li {
+    width: 100%;
+}
+.dropdown-menu li a {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+.dropdown-menu li a i {
+    margin-right: 8px;
+}
+.content {
+    margin-top: 80px;
+    padding: 20px;
+}
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    background: url('img/hinh-nen-desktop-35.jpg') no-repeat center center fixed;
+    backgrouNd-size: cover;
+}   
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+.account-card {
+    max-width: 25%;
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.account-card:hover {
+    transform: translateY(-5px);
+}
+.qr image{
+    text-align: center;
+    width: 50;
+}
+
+
+.category {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Căn giữa ngang */
+    align-items: center; /* Căn giữa dọc */
+    width: fit-content; /* Độ rộng tự động theo nội dung */
+    margin: 20px auto; /* Căn giữa theo chiều ngang */
+    background: #0b6149; /* Màu nền */
+    color: white; /* Màu chữ */
+    font-size: 22px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border: 3px solid #e0e0e0;
+    position: relative;
+    bottom: -55px;
+    z-index: 2;
+}
+
+/* Hiệu ứng viền phát sáng */
+.category::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 50px;
+    border: 3px solid white;
+    opacity: 0.8;
+}
+
+/* Hiệu ứng hover */
+.category:hover {
+    background: #0d7557;
+    box-shadow: 0 0 15px rgba(0, 255, 100, 0.5);
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+button {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buy-now {
+    background-color: #ff4d4d;
+    color: white;
+    margin: 10px;
+    box-shadow: 0 4px 6px rgba(255, 77, 77, 0.3);
+}
+
+.buy-now:hover {
+    background-color: #e60000;
+    box-shadow: 0 6px 10px rgba(255, 77, 77, 0.5);
+}
+
+.buy-now:active {
+    background-color: #cc0000;
+    transform: scale(0.95);
+}
+
+
+.add-to-cart {
+    background-color: #ffa500;
+    color: white;
+    box-shadow: 0 4px 6px rgba(255, 165, 0, 0.3);
+}
+
+.add-to-cart:hover {
+    background-color: #ff8c00;
+    box-shadow: 0 6px 10px rgba(255, 140, 0, 0.5);
+}
+
+.add-to-cart:active {
+    background-color: #e67e00;
+    transform: scale(0.95);
+}
+.site-title {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Hiệu ứng xuất hiện */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.shop-title {
+    font-size: 20px;
+    font-weight: bold;
+    color:white;
+}
+
+
+p {
+    font-size: 16px;
+    color: #333;
+}
+
+strong {
+    color: #000;
+}
+
+.copy-btn {
+    background-color: #198754;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.copy-btn:hover {
+    background-color: #145c35;
+}
+
+.vip-top {
+    background: url('img/top-bg-img.png') no-repeat center top;
+    background-size: contain;
+    width: 100%;
+    /* background-size: cover; */
+    padding-top: 10%;
+}
+.vip-bottom {
+    background: url('img/bottom-bg-img.png') no-repeat center bottom;
+    background-size: contain;
+    width: 100%;
+    /* min-height: 200px; */
+    padding-bottom: 10%;
+    position: relative;
+    /* background-size: cover ; */
+}
+.container{
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap;
+    position: relative;
+    background: url('img/mid-bg.png') repeat-y center center;
+    background-size: contain;
+    margin-bottom: 50px;
+}
+.account-card h5{
+    color: #2d4e96;
+    cursor: pointer;
+}
+.account-card h5:hover{
+    color:black;
+}
+.footer {
+    background-color: #000000;
+    background-size:cover ;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    text-align: left;
+    max-width: 300px;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #f8b400;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 8px;
+    
+}
+.footer-column strong{
+    color: rgb(255, 190, 190);
+}
+
+.footer-column a {
+    color: #bbb;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    color: #f8b400;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    margin-top: 20px;
+    padding-top: 10px;
+}

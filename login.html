@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Bán Tài Khoản Game</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+
+/* Định dạng chung */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+
+/* Container chính */
+.login-container {
+    background: rgba(255, 255, 255, 0.1);
+    
+    width: 350px;
+    text-align: center;
+    justify-self: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+/* Hộp đăng nhập */
+.container{
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap;
+    position: relative;
+    background: url('img/mid-bg.png') repeat-y center center;
+    background-size: contain;
+    margin-bottom: 50px;
+}
+
+/* Tiêu đề */
+h2 {
+    font-size: 20px;
+    color: #5a3e2b;
+    margin-bottom: 20px;
+}
+
+/* Ô nhập liệu */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* Định dạng link */
+.links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.links a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 14px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* Nút đăng nhập */
+button {
+    width: 100%;
+    padding: 10px;
+    background: #4c9a2a;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #3b7a1a;
+}
+
+
+    </style> 
+</head>
+<body>
+    
+    
+
+    <div class="navbar">
+        <a href="index.html"><img class="img" src="img/logo.png" alt="logo"></a>
+        <ul>
+            <li><a href="index.html">Trang chủ</a></li>
+            <li>
+                <a href="">Mua tài khoản <i class=" bi-chevron-down"></i></a>
+                
+                <ul class="dropdown-menu">
+                    <li><a href="#acc-vip"><i class="fas fa-star"></i> ACC VIP</a></li>
+                    <li><a href="#acc-khoidau"><i class="fas fa-gamepad"></i> ACC Khởi Đầu</a></li>
+                </ul>
+            </li>
+            <li><a href="nap.html">Nạp tiền</a></li>
+        </ul>
+        <div class="login"> <a href="login.html">đăng nhập</a> </div>
+
+    </div>
+    
+
+    
+    <div class="login-container">
+        
+        <div class="container">
+            <div class="vip-top"></div>
+            <h2>ĐĂNG NHẬP TÀI KHOẢN</h2>
+            <form>
+                <div class="input-group">
+                    <input type="text" placeholder="Tên đăng nhập" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" placeholder="Mật khẩu" required>
+                </div>
+                <div class="links">
+                    <a href="#">Đăng ký</a>
+                    <a href="#">Quên mật khẩu?</a>
+                </div>
+                <button type="submit">Đăng nhập</button>
+            </form>
+            <div class="vip-bottom"></div>
+        </div>
+        
+    </div>
+
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Cột Liên Hệ -->
+            <div class="footer-column">
+                <h3>Liên Hệ</h3>
+                <ul>
+                    <li><strong>HoYoLAB:</strong> hoyolab@hoyoverse.com</li>
+                    <li><strong>Genshin Impact:</strong> genshin_cs@hoyoverse.com</li>
+                    <li><strong>Honkai Impact 3:</strong> honkai3rdvn_asia@hoyoverse.com</li>
+                    <li><strong>Tears of Themis:</strong> totcs_glb@hoyoverse.com</li>
+                    <li><strong>Honkai: Star Rail:</strong> hsrcs_vn@hoyoverse.com</li>
+                    <li><strong>Zenless Zone Zero:</strong> zzzcs_vn@hoyoverse.com</li>
+                </ul>
+            </div>
+    
+            <!-- Cột Chính Sách -->
+            <div class="footer-column">
+                <h3>Chính Sách & Điều Khoản</h3>
+                <ul>
+                    <li><a href="#">Chính Sách Bảo Mật Của Forums</a></li>
+                    <li><a href="#">Điều Khoản Dịch Vụ Của Forums</a></li>
+                    <li><a href="#">Chính Sách Về Quyền Riêng Tư Của Thẻ Thông Hành</a></li>
+                    <li><a href="#">Điều Khoản Dịch Vụ Của Thẻ Thông Hành</a></li>
+                    <li><a href="#">Quy Định Cộng Đồng</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- Bản quyền -->
+        <div class="footer-bottom">
+            <p>Copyright © COGNOSPHERE. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
